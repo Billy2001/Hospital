@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.billygarcia.controller.RecetaControlller">
+   <children>
+      <ImageView fitHeight="411.0" fitWidth="613.0" layoutX="-7.0" layoutY="-8.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../images/Receta.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="228.0" layoutY="14.0" text="Recetas" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="46.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodReceta" layoutX="228.0" layoutY="100.0" prefHeight="25.0" prefWidth="62.0" />
+      <Label layoutX="25.0" layoutY="100.0" text="CodigoReceta" textFill="#ebebeb">
+         <font>
+            <Font name="Bell MT" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodCOntrolCita" layoutX="228.0" layoutY="139.0" prefHeight="25.0" prefWidth="62.0" />
+      <Label layoutX="25.0" layoutY="139.0" text="CodigoControlCita" textFill="#ebebeb">
+         <font>
+            <Font name="Bell MT" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDescripcion" layoutX="430.0" layoutY="100.0" />
+      <Label layoutX="323.0" layoutY="100.0" text="Descripción" textFill="#ebebeb">
+         <font>
+            <Font name="Bell MT" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblRecetas" layoutX="46.0" layoutY="186.0" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="293.0">
+        <columns>
+          <TableColumn fx:id="colCodReceta" prefWidth="75.0" text="CodReceta" />
+          <TableColumn fx:id="colDescripcion" prefWidth="120.0" text="Descripcion" />
+            <TableColumn fx:id="colCodControlCita" prefWidth="95.0" text="CodControlCita" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAgregar" layoutX="392.0" layoutY="200.0" mnemonicParsing="false" onAction="#nuevo" text="Agregar" />
+      <Button fx:id="btnModificar" layoutX="388.0" layoutY="244.0" mnemonicParsing="false" onAction="#edit" text="Modificar" />
+      <Button fx:id="btnEliminar" layoutX="392.0" layoutY="286.0" mnemonicParsing="false" onAction="#Eliminar" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="392.0" layoutY="326.0" mnemonicParsing="false" onAction="#imprimirReporte" text="Reporte" />
+      <Button layoutX="468.0" layoutY="326.0" mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General" />
+      <Hyperlink layoutX="453.0" layoutY="26.0" onAction="#menuPrincipal" text="Menu Principal" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="19.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

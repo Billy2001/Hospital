@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperPrint xmlns="http://jasperreports.sourceforge.net/jasperreports/print" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/print http://jasperreports.sourceforge.net/xsd/jasperprint.xsd" name="RecetasGeneralreport" pageWidth="842" pageHeight="595" topMargin="20" leftMargin="20" bottomMargin="20" rightMargin="20" orientation="Landscape" locale="es_ES" timezone="America/Regina">
+	<property name="net.sf.jasperreports.export.xml.start.page.index" value="0"/>
+	<property name="net.sf.jasperreports.export.xml.end.page.index" value="0"/>
+	<property name="net.sf.jasperreports.export.xml.page.count" value="1"/>
+	<origin band="background"/>
+	<origin band="title"/>
+	<origin band="pageHeader"/>
+	<origin band="columnHeader"/>
+	<origin band="detail"/>
+	<origin band="columnFooter"/>
+	<origin band="pageFooter"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent"/>
+	<page>
+		<text verticalAlignment="Middle" textHeight="57.495117" lineSpacingFactor="1.1499023" leadingOffset="-9.753418">
+			<reportElement uuid="561b7f3d-8094-4731-9dcc-86a117241cb9" style="Title" x="247" y="30" width="346" height="62" origin="1" srcId="1" printId="1"/>
+			<font pdfFontName="Times-Roman"/>
+			<textContent><![CDATA[Reporte Receta]]></textContent>
+		</text>
+		<line>
+			<reportElement uuid="70a48514-72e5-4d5d-9d49-201f140f5c8f" x="20" y="171" width="802" height="1" origin="3" srcId="2" printId="1"/>
+			<graphicElement>
+				<pen lineWidth="0.5" lineColor="#999999"/>
+			</graphicElement>
+		</line>
+		<text textHeight="13.798828" lineSpacingFactor="1.1499023" leadingOffset="-2.3466797">
+			<reportElement uuid="2c3a6855-d1b1-4500-8c72-ce46bfe435e4" style="Column header" x="20" y="156" width="267" height="15" forecolor="#736343" origin="3" srcId="3" printId="1"/>
+			<textContent><![CDATA[codigoReceta]]></textContent>
+		</text>
+		<text textHeight="13.798828" lineSpacingFactor="1.1499023" leadingOffset="-2.3466797">
+			<reportElement uuid="5e986abd-e0f1-43ab-a479-715f4bfafb51" style="Column header" x="287" y="156" width="267" height="15" forecolor="#736343" origin="3" srcId="4" printId="1"/>
+			<textContent><![CDATA[descripcionReceta]]></textContent>
+		</text>
+		<text textHeight="13.798828" lineSpacingFactor="1.1499023" leadingOffset="-2.3466797">
+			<reportElement uuid="0f00c08b-a491-4268-8902-d04ee2bb6acc" style="Column header" x="554" y="156" width="267" height="15" forecolor="#736343" origin="3" srcId="5" printId="1"/>
+			<textContent><![CDATA[codigoControlCita]]></textContent>
+		</text>
+		<frame>
+			<reportElement uuid="e208732d-561f-4e44-a738-2109e761f476" style="Row" mode="Opaque" x="20" y="172" width="802" height="15" origin="4" srcId="6" printId="1"/>
+			<text textHeight="13.798828" lineSpacingFactor="1.1499023" leadingOffset="-2.3466797" valueClass="java.lang.Integer">
+				<reportElement uuid="50eb5ee3-c1ef-4d25-9ec4-20219f7a9dc4" style="Detail" x="0" y="0" width="267" height="15" origin="4" srcId="7" printId="1"/>
+				<textContent><![CDATA[3]]></textContent>
+			</text>
+			<text textHeight="13.798828" lineSpacingFactor="1.1499023" leadingOffset="-2.3466797">
+				<reportElement uuid="deef41e5-cc6a-4df2-8e59-0d1d0987cb97" style="Detail" x="267" y="0" width="267" height="15" origin="4" srcId="8" printId="1"/>
+				<textContent><![CDATA[Acetaminof]]></textContent>
+			</text>
+			<text textHeight="13.798828" lineSpacingFactor="1.1499023" leadingOffset="-2.3466797" valueClass="java.lang.Integer">
+				<reportElement uuid="9b412f39-a036-4351-9479-f97e398a7ec3" style="Detail" x="534" y="0" width="267" height="15" origin="4" srcId="9" printId="1"/>
+				<textContent><![CDATA[4]]></textContent>
+			</text>
+		</frame>
+		<line>
+			<reportElement uuid="cdf7d55c-a935-4f42-81c0-003551f21ebe" x="20" y="547" width="802" height="1" origin="5" srcId="10" printId="1"/>
+			<graphicElement>
+				<pen lineWidth="0.5" lineColor="#999999"/>
+			</graphicElement>
+		</line>
+		<frame>
+			<reportElement uuid="6342720d-c65c-4851-b1e5-bde9e793c30b" mode="Opaque" x="-1" y="551" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" origin="6" srcId="11" printId="1"/>
+			<text verticalAlignment="Middle" textHeight="11.499023" lineSpacingFactor="1.1499023" leadingOffset="-1.9555664">
+				<reportElement uuid="9b34eeec-5fa1-4352-bded-6ec60141b7d7" style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" origin="6" srcId="12" printId="1"/>
+				<font size="10" isBold="false"/>
+				<textContent><![CDATA[ 1]]></textContent>
+			</text>
+			<text textAlignment="Right" verticalAlignment="Middle" textHeight="11.499023" lineSpacingFactor="1.1499023" leadingOffset="-1.9555664">
+				<reportElement uuid="b6c9d982-b517-4a67-b1b6-67d7ba1223f7" style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" origin="6" srcId="13" printId="1"/>
+				<font size="10" isBold="false"/>
+				<textContent><![CDATA[Page 1 of]]></textContent>
+			</text>
+			<text verticalAlignment="Middle" textHeight="11.499023" lineSpacingFactor="1.1499023" leadingOffset="-1.9555664" valueClass="java.util.Date" pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="d9158250-609f-42d7-9af2-439847e890cf" style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" origin="6" srcId="14" printId="1"/>
+				<font size="10" isBold="false"/>
+				<textContent><![CDATA[miércoles 24 julio 2019]]></textContent>
+			</text>
+		</frame>
+	</page>
+</jasperPrint>

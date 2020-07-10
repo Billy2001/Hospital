@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.billygarcia.controller.MedicosController">
+   <children>
+      <ImageView fitHeight="510.0" fitWidth="717.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Sin%20título.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="66.0" layoutY="128.0" text="Codigo" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbMedico" layoutX="127.0" layoutY="126.0" prefWidth="150.0" />
+      <Label layoutX="311.0" layoutY="102.0" text="Licencia" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="163.0" text="Nombre" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLicencia" layoutX="390.0" layoutY="100.0" />
+      <TextField fx:id="txtNombre" layoutX="128.0" layoutY="161.0" />
+      <Label layoutX="306.0" layoutY="137.0" text="Apellidos" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtApellidos" layoutX="390.0" layoutY="135.0" />
+      <Label layoutX="36.0" layoutY="222.0" text="Entrada" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="338.0" layoutY="221.0" text="Salida" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMedicos" layoutX="61.0" layoutY="290.0" onMouseClicked="#seleccionar" prefHeight="163.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="colCodigoMedico" prefWidth="92.0" text="Codigo Medico" />
+          <TableColumn fx:id="colLicenciaMedica" prefWidth="95.0" text="Licencia Medica" />
+            <TableColumn fx:id="colNombre" prefWidth="56.0" text="Nombre" />
+            <TableColumn fx:id="colApellidos" prefWidth="63.0" text="Apellidos" />
+            <TableColumn fx:id="colHorarioEntrada" prefWidth="96.0" text="Horario Entrada" />
+            <TableColumn fx:id="colHorarioSalida" minWidth="0.0" prefWidth="92.0" text="Horario Salida" />
+            <TableColumn fx:id="colSexo" minWidth="0.0" prefWidth="64.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAgregar" layoutX="92.0" layoutY="460.0" mnemonicParsing="false" onAction="#nuevo" text="Agregar" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnModificar" layoutX="224.0" layoutY="460.0" mnemonicParsing="false" onAction="#edit" text="Modificar" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="376.0" layoutY="460.0" mnemonicParsing="false" onAction="#Eliminar" text="Eliminar" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="474.0" layoutY="460.0" mnemonicParsing="false" onAction="#imprimirReporte" text="Reporte" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="269.0" layoutY="22.0" text="Medicos" textAlignment="JUSTIFY" textFill="#0f5151" textOverrun="CLIP">
+         <font>
+            <Font name="Bell MT" size="52.0" />
+         </font>
+      </Label>
+      <Label layoutX="341.0" layoutY="174.0" text="Sexo" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSexo" layoutX="390.0" layoutY="175.0" />
+      <GridPane fx:id="grpHorarioEntrada" layoutX="109.0" layoutY="221.0" prefHeight="25.0" prefWidth="168.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <DatePicker fx:id="dtpEntrada" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="grpHorarioSalida" layoutX="390.0" layoutY="221.0" prefHeight="25.0" prefWidth="168.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <DatePicker fx:id="dtpSalida" prefHeight="9.0" prefWidth="174.0" />
+         </children>
+      </GridPane>
+      <Hyperlink layoutX="510.0" layoutY="14.0" onAction="#menuPrincipal" text="MenuPrincipal" textFill="#0a0a0a">
+         <font>
+            <Font name="Bell MT" size="23.0" />
+         </font>
+      </Hyperlink>
+      <Button fx:id="btnReporte1" layoutX="568.0" layoutY="460.0" mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="13.0" />
+         </font>
+      </Button>
+      <MenuBar layoutX="44.0" layoutY="33.0">
+         <menus>
+            <Menu mnemonicParsing="false" onAction="#ventanaTelefonoMedico" text="Tell">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Telefono Medico" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

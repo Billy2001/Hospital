@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.billygarcia.controller.AreasController">
+   <children>
+      <ImageView fitHeight="409.0" fitWidth="606.0" layoutX="-4.0" layoutY="-3.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../images/Fotolia_54048895_R_r_1300x800_o.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="225.0" layoutY="6.0" text="Areas">
+         <font>
+            <Font name="Bell MT" size="63.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoArea" layoutX="149.0" layoutY="88.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="TxtNombreArea" layoutX="397.0" layoutY="88.0" />
+      <Label layoutX="288.0" layoutY="90.0" text="Nombre Area">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="92.0" text="Codigo Area">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblAreas" layoutX="200.0" layoutY="121.0" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="ColCodAreas" prefWidth="94.0" text="ColCodAreas" />
+          <TableColumn fx:id="colNombreAreas" prefWidth="105.0" text="ColNombreArea" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAgregar" layoutX="57.0" layoutY="332.0" mnemonicParsing="false" text="Agregar" />
+      <Button fx:id="btnModificar" layoutX="144.0" layoutY="332.0" mnemonicParsing="false" text="Modificar" />
+      <Button fx:id="btnEliminar" layoutX="257.0" layoutY="332.0" mnemonicParsing="false" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="358.0" layoutY="332.0" mnemonicParsing="false" text="Reporte" />
+      <Button layoutX="452.0" layoutY="332.0" mnemonicParsing="false" text="Reporte General" />
+      <Hyperlink layoutX="413.0" layoutY="22.0" onAction="#menuPrincipal" text="Menu Principal">
+         <font>
+            <Font name="Bell MT" size="26.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

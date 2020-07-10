@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.billygarcia.controller.PacientesController">
+   <children>
+      <ImageView fitHeight="521.0" fitWidth="685.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Paciente.png" />
+         </image></ImageView>
+      <Label layoutX="266.0" layoutY="14.0" text="Paciente" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="82.0" text="Codigo Paciente" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font></Label>
+      <Label layoutX="52.0" layoutY="127.0" text="DPI" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font></Label>
+      <Label layoutX="53.0" layoutY="152.0" text="Apellido" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font></Label>
+      <Label layoutX="54.0" layoutY="188.0" text="Nombre" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font></Label>
+      <Label layoutX="53.0" layoutY="215.0" text="Fecha de nacimiento" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font></Label>
+      <Label layoutX="418.0" layoutY="93.0" text="Edad" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font></Label>
+      <Label layoutX="420.0" layoutY="129.0" text="Dirección" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font></Label>
+      <Label layoutX="418.0" layoutY="162.0" text="Ocupacion" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font></Label>
+      <Label layoutX="420.0" layoutY="199.0" text="Sexo" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font></Label>
+      <GridPane fx:id="grpFechaNacimiento" layoutX="188.0" layoutY="211.0" prefHeight="30.0" prefWidth="120.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <DatePicker fx:id="dtpFechaNacimiento" prefHeight="25.0" prefWidth="118.0" />
+         </children>
+      </GridPane>
+      <TextField fx:id="txtEdad" layoutX="498.0" layoutY="89.0" prefHeight="25.0" prefWidth="120.0" />
+      <TableView fx:id="tblPaciente" layoutX="25.0" layoutY="264.0" onMouseClicked="#seleccionar" prefHeight="144.0" prefWidth="650.0">
+        <columns>
+          <TableColumn fx:id="colCodPaciente" prefWidth="75.0" text="CodPaciente" />
+          <TableColumn fx:id="colDPI" prefWidth="61.0" text="DPI" />
+            <TableColumn fx:id="colApellido" prefWidth="66.0" text="Apellido" />
+            <TableColumn fx:id="colNombre" prefWidth="71.0" text="Nombre" />
+            <TableColumn fx:id="colFechaNacimiento" prefWidth="102.0" text="FechaNacimiento" />
+            <TableColumn fx:id="colEdad" prefWidth="50.0" text="Edad" />
+            <TableColumn fx:id="colDireccion" prefWidth="100.0" text="Dirección" />
+            <TableColumn fx:id="colOcupacion" prefWidth="75.0" text="Ocupacion" />
+            <TableColumn fx:id="colSexo" prefWidth="54.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtDireccion" layoutX="498.0" layoutY="125.0" prefHeight="25.0" prefWidth="120.0" />
+      <TextField fx:id="txtOcupacion" layoutX="505.0" layoutY="162.0" prefHeight="25.0" prefWidth="120.0" />
+      <TextField fx:id="txtSexo" layoutX="498.0" layoutY="199.0" prefHeight="25.0" prefWidth="120.0" />
+      <TextField fx:id="txtDPI" layoutX="188.0" layoutY="117.0" prefHeight="25.0" prefWidth="120.0" />
+      <TextField fx:id="txtApellido" layoutX="188.0" layoutY="150.0" prefHeight="25.0" prefWidth="120.0" />
+      <TextField fx:id="txtNombre" layoutX="188.0" layoutY="178.0" prefHeight="25.0" prefWidth="120.0" />
+      <ComboBox fx:id="cmbPaciente" layoutX="188.0" layoutY="77.0" prefHeight="25.0" prefWidth="120.0" />
+      <Button fx:id="btnAgregar" layoutX="79.0" layoutY="418.0" mnemonicParsing="false" onAction="#nuevo" text="Agregar" />
+      <Button fx:id="btnEliminar" layoutX="374.0" layoutY="418.0" mnemonicParsing="false" onAction="#Eliminar" text="Eliminar" />
+      <Button fx:id="btnModificar" layoutX="196.0" layoutY="418.0" mnemonicParsing="false" onAction="#edit" text=" Modificar" />
+      <Button fx:id="btnReporte" layoutX="476.0" layoutY="418.0" mnemonicParsing="false" onAction="#imprimirReporte" text="Reporte" />
+      <Hyperlink layoutX="519.0" layoutY="14.0" onAction="#menuPrincipal" text="Menu Principal" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="20.0" />
+         </font>
+      </Hyperlink>
+      <MenuBar layoutX="43.0" layoutY="30.0" />
+      <Button fx:id="btnReporte1" layoutX="557.0" layoutY="418.0" mnemonicParsing="false" onAction="#imprimirReporteGeneral" prefHeight="25.0" prefWidth="118.0" text="Reporte General" />
+   </children>
+</AnchorPane>

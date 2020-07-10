@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.billygarcia.controller.menuPrincipalController">
+   <children>
+      <ImageView fitHeight="313.0" fitWidth="439.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/hospital_de_sabanagrande_1.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="107.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaPaciente" text="Pacientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedico" text="Medicos" />
+                  <MenuItem mnemonicParsing="false" text="Turnos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaespecialidades" text="Especialidades" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaContactoUrgencia" text="Contacto Urgencia" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaAreas" text="Areas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaControlCitas" text="Control de Citas" />
+                  <MenuItem mnemonicParsing="false" onAction="#VentanaReceta" text="Receta" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Reporte de Citas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Acerca de">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </MenuBar>
+      <Label layoutX="133.0" layoutY="167.0" text="Principal" textFill="#110000">
+         <font>
+            <Font name="Bell MT" size="43.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
